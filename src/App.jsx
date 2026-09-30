@@ -83,7 +83,7 @@ const Home = () => {
   return (
     <div className="page-enter-active">
       <section className="hero container grid-2" style={{alignItems: 'center'}}>
-        <div className="hero-content reveal-on-scroll stagger-1">
+        <div className="hero-content">
           <span className="eyebrow" style={{color: 'var(--accent)'}}>Transformational L&D × Technology</span>
           <h1 className="serif">
             {content.personalInfo.headline}
@@ -96,7 +96,7 @@ const Home = () => {
             <NavLink to="/about" className="btn btn-secondary">About Me</NavLink>
           </div>
         </div>
-        <div className="hero-image-wrapper reveal-on-scroll stagger-2">
+        <div className="hero-image-wrapper">
           <img src={content.personalInfo.heroImage} alt="Mohammed Mazher at work" className="hero-image" />
           <div className="color-accent-block"></div>
         </div>
