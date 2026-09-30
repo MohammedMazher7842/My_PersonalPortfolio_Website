@@ -8,7 +8,16 @@ export const content = {
     linkedIn: "[LINKEDIN URL]",
     resumeLink: "#",
     aboutMeIntro: "I am a Transformational L&D Leader and Technology Builder focused on creating learning experiences powered by technology.",
+    heroImage: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", // Placeholder for Hero image
+    profileImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // Placeholder for About page profile
   },
+
+  metrics: [
+    { value: "15+", label: "Learning Platforms Built" },
+    { value: "50k+", label: "Employees Reached" },
+    { value: "95%", label: "Average Completion Rate" },
+    { value: "10+", label: "Years Experience" }
+  ],
   
   whatIWorkOn: [
     {
@@ -39,6 +48,7 @@ export const content = {
       title: "SURYAOJASVI LEARNING ACADEMY",
       category: "Learning Technology / LMS / Learning Ecosystem",
       shortDescription: "Building and managing a digital learning environment designed to support learning across multiple business units.",
+      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // Placeholder
       challenge: "[Challenge placeholder - What problem or opportunity existed?]",
       context: "[Context placeholder - What was happening around the problem?]",
       role: "[Role placeholder - What did I personally own or contribute?]",
@@ -55,6 +65,7 @@ export const content = {
       title: "SIFIT LEARNING & PERFORMANCE DASHBOARD",
       category: "Learning Analytics / Data Visualization",
       shortDescription: "Turning learning and participation data into a visual system that helps leaders understand engagement and performance.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // Placeholder
       challenge: "[Challenge placeholder]",
       context: "[Context placeholder]",
       role: "[Role placeholder]",
@@ -71,6 +82,7 @@ export const content = {
       title: "AI-POWERED LEARNING",
       category: "AI / Learning Innovation",
       shortDescription: "Exploring how AI can improve learning design, content creation, personalization, assessment and learning operations.",
+      image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // Placeholder
       challenge: "[Challenge placeholder]",
       context: "[Context placeholder]",
       role: "[Role placeholder]",
@@ -87,6 +99,7 @@ export const content = {
       title: "LEARNING & CULTURE EXPERIENCES",
       category: "Culture / Engagement / Learning",
       shortDescription: "Designing organizational learning and engagement experiences (e.g. RICHYS, SAIL, WOW Festival, KBS, SCL).",
+      image: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // Placeholder
       challenge: "[Challenge placeholder]",
       context: "[Context placeholder]",
       role: "[Role placeholder]",
@@ -97,6 +110,54 @@ export const content = {
       impact: "Impact measurement in progress",
       learnings: "[Learnings placeholder]",
       nextSteps: "[Next steps placeholder]"
+    }
+  ],
+
+  videos: [
+    {
+      id: "v1",
+      title: "Facilitating High-Impact Teams",
+      description: "A snippet from a recent workshop on building resilient teams.",
+      thumbnail: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      videoUrl: "#" // Replace with actual YouTube/Vimeo link
+    },
+    {
+      id: "v2",
+      title: "Data-Driven Learning Design",
+      description: "Webinar on using analytics to reshape learning ecosystems.",
+      thumbnail: "https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      videoUrl: "#" // Replace with actual YouTube/Vimeo link
+    },
+    {
+      id: "v3",
+      title: "AI in L&D Keynote",
+      description: "Discussing the future of generative AI in corporate learning.",
+      thumbnail: "https://images.unsplash.com/photo-1475721025599-cf16006f1584?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      videoUrl: "#" // Replace with actual YouTube/Vimeo link
+    }
+  ],
+
+  testimonials: [
+    {
+      id: "t1",
+      quote: "Mohammed completely transformed how we approach learning. The systems he built didn't just deliver content; they actively shaped our organizational culture and improved performance metrics across the board.",
+      name: "Jane Doe",
+      title: "VP of People Operations",
+      company: "TechCorp"
+    },
+    {
+      id: "t2",
+      quote: "A rare combination of deep technological expertise and genuine empathy for the learner. The analytics dashboard he designed gave us unprecedented visibility into engagement.",
+      name: "John Smith",
+      title: "Director of Learning",
+      company: "Innovate Inc"
+    },
+    {
+      id: "t3",
+      quote: "Mohammed's facilitation style is deeply engaging. He has a unique ability to translate complex concepts into actionable, human-centered learning journeys.",
+      name: "Sarah Jenkins",
+      title: "Head of Talent Development",
+      company: "Global Solutions"
     }
   ],
 
@@ -120,36 +181,6 @@ export const content = {
       observation: "[Observation placeholder]",
       learning: "[Learning placeholder]",
       nextExperiment: "[Next experiment placeholder]"
-    },
-    {
-      id: "03",
-      title: "WHAT MAKES PEOPLE ACTUALLY REMEMBER TRAINING?",
-      question: "Which reinforcement strategies lead to the highest retention?",
-      hypothesis: "[Hypothesis placeholder]",
-      experiment: "[Experiment placeholder]",
-      observation: "[Observation placeholder]",
-      learning: "[Learning placeholder]",
-      nextExperiment: "[Next experiment placeholder]"
-    },
-    {
-      id: "04",
-      title: "CAN AUTOMATION REDUCE L&D ADMINISTRATION?",
-      question: "What percentage of L&D operations can be fully automated?",
-      hypothesis: "[Hypothesis placeholder]",
-      experiment: "[Experiment placeholder]",
-      observation: "[Observation placeholder]",
-      learning: "[Learning placeholder]",
-      nextExperiment: "[Next experiment placeholder]"
-    },
-    {
-      id: "05",
-      title: "HOW CAN STORYTELLING CHANGE LEARNING EXPERIENCES?",
-      question: "Does narrative-driven learning outperform factual delivery?",
-      hypothesis: "[Hypothesis placeholder]",
-      experiment: "[Experiment placeholder]",
-      observation: "[Observation placeholder]",
-      learning: "[Learning placeholder]",
-      nextExperiment: "[Next experiment placeholder]"
     }
   ],
 
@@ -168,16 +199,6 @@ export const content = {
       id: "03",
       title: "DATA SHOULD IMPROVE LEARNING DECISIONS.",
       description: "Analytics shouldn't just track completion. They should give us insights into engagement, performance, and where to intervene."
-    },
-    {
-      id: "04",
-      title: "TECHNOLOGY SHOULD AMPLIFY HUMAN LEARNING.",
-      description: "Tools exist to reduce friction and scale impact, not to replace the essential human elements of connection and guidance."
-    },
-    {
-      id: "05",
-      title: "LEARNING SHOULD CONNECT TO REAL PROBLEMS.",
-      description: "Content without context is quickly forgotten. Learning must be deeply tethered to the actual challenges people face."
     }
   ],
 
