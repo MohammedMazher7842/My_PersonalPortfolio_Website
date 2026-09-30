@@ -36,9 +36,9 @@ const Navbar = () => {
         </NavLink>
         
         <div className="nav-links">
+          <NavLink to="/about" className={({isActive}) => isActive ? "nav-link active" : "nav-link"}>About</NavLink>
           <NavLink to="/work" className={({isActive}) => isActive ? "nav-link active" : "nav-link"}>Work</NavLink>
           <NavLink to="/lab" className={({isActive}) => isActive ? "nav-link active" : "nav-link"}>Learning Lab</NavLink>
-          <NavLink to="/about" className={({isActive}) => isActive ? "nav-link active" : "nav-link"}>About</NavLink>
           <a href={content.personalInfo.contactEmail} className="btn btn-primary" style={{marginLeft: '1rem', padding: '0.5rem 1rem'}}>Let's Connect</a>
         </div>
 
@@ -50,9 +50,9 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div style={{ position: 'absolute', top: '100%', left: 0, width: '100%', background: 'var(--bg-color)', borderBottom: '1px solid var(--border-color)', padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1.5rem', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}>
+          <NavLink to="/about" onClick={() => setIsOpen(false)} style={{fontSize: '1.125rem'}}>About</NavLink>
           <NavLink to="/work" onClick={() => setIsOpen(false)} style={{fontSize: '1.125rem'}}>Work</NavLink>
           <NavLink to="/lab" onClick={() => setIsOpen(false)} style={{fontSize: '1.125rem'}}>Learning Lab</NavLink>
-          <NavLink to="/about" onClick={() => setIsOpen(false)} style={{fontSize: '1.125rem'}}>About</NavLink>
           <a href={content.personalInfo.contactEmail} onClick={() => setIsOpen(false)} style={{fontSize: '1.125rem', color: 'var(--accent)', fontWeight: 500}}>Let's Connect</a>
         </div>
       )}
@@ -107,7 +107,7 @@ const Home = () => {
         <div className="container grid-4">
           {content.metrics.map((metric, idx) => (
             <div key={idx} className="metric-box">
-              <h2 className="serif text-accent hover-scale" style={{fontSize: '3.5rem', marginBottom: '0.5rem'}}>{metric.value}</h2>
+              <h2 className="serif text-accent hover-scale" style={{fontSize: '2.5rem', marginBottom: '0.5rem'}}>{metric.value}</h2>
               <span className="eyebrow" style={{color: 'rgba(255,255,255,0.7)'}}>{metric.label}</span>
             </div>
           ))}
@@ -202,7 +202,7 @@ const Work = () => {
   useScrollReveal();
   return (
     <div className="container section page-enter-active">
-      <h1 className="serif reveal-on-scroll" style={{marginBottom: '4rem', fontSize: '4rem'}}>Selected Work</h1>
+      <h1 className="serif reveal-on-scroll" style={{marginBottom: '4rem', fontSize: '3rem'}}>Selected Work</h1>
       <div className="grid-2">
         {content.projects.map((project, idx) => (
           <div key={project.slug} className="card project-card reveal-on-scroll hover-lift">
@@ -251,7 +251,7 @@ const CaseStudy = () => {
       </div>
       <header className="container section reveal-on-scroll stagger-1" style={{marginTop: '-8rem', position: 'relative', zIndex: 10, background: 'var(--bg-color)', padding: '4rem', boxShadow: '0 -20px 40px rgba(0,0,0,0.05)', border: '1px solid var(--border-color)'}}>
         <span className="eyebrow" style={{color: 'var(--accent)'}}>{project.category}</span>
-        <h1 className="serif" style={{fontSize: '3rem'}}>{project.title}</h1>
+        <h1 className="serif" style={{fontSize: '2.25rem'}}>{project.title}</h1>
       </header>
       <div className="container section" style={{paddingTop: '2rem'}}>
         <div style={{maxWidth: '800px', margin: '0 auto'}}>
@@ -277,7 +277,7 @@ const LearningLab = () => {
         <div className="container reveal-on-scroll">
           <div style={{maxWidth: '800px'}}>
             <span className="eyebrow" style={{color: 'var(--highlight)'}}>R&D Space</span>
-            <h1 className="serif" style={{fontSize: '4rem', marginBottom: '1.5rem'}}>Learning Lab</h1>
+            <h1 className="serif" style={{fontSize: '3rem', marginBottom: '1.5rem'}}>Learning Lab</h1>
             <p style={{fontSize: '1.25rem', opacity: 0.9}}>
               Experiments at the intersection of learning, technology and human behaviour.
             </p>
@@ -367,7 +367,7 @@ const About = () => {
 
       <div className="bg-accent text-light section reveal-on-scroll">
         <div className="container">
-          <h2 className="serif" style={{marginBottom: '4rem', fontSize: '3rem'}}>Skills Ecosystem</h2>
+          <h2 className="serif" style={{marginBottom: '4rem', fontSize: '2.25rem'}}>Skills Ecosystem</h2>
           <div className="grid-3">
             {Object.entries(content.skills).map(([category, skills]) => (
               <div key={category} className="card-transparent hover-lift">
@@ -387,7 +387,7 @@ const About = () => {
       </div>
 
       <div className="container section reveal-on-scroll" style={{maxWidth: '800px', margin: '0 auto'}}>
-        <h2 className="serif" style={{marginBottom: '3rem', fontSize: '3rem'}}>Professional Journey</h2>
+        <h2 className="serif" style={{marginBottom: '3rem', fontSize: '2.25rem'}}>Professional Journey</h2>
         <div style={{marginBottom: '4rem'}}>
           <p style={{fontSize: '1.125rem', marginBottom: '3rem', color: 'var(--text-secondary)'}}>{content.resume.summary}</p>
           <div style={{display: 'flex', flexDirection: 'column', gap: '3rem'}}>
