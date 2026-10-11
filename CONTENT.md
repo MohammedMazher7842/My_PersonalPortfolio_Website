@@ -1,50 +1,63 @@
-# Portfolio Architecture & Content Guide
+# Mohammed Mazher Pasha - Portfolio Content & Maintenance Guide
 
-Welcome to your personal portfolio. This website is built using **React** and **Vite** to ensure fast performance and high maintainability, while keeping the content easy to update for non-developers.
+Welcome to your newly rebuilt personal portfolio! This website is built using **React 19**, **Vite**, and **React Router 7**, styled with modern, accessible **Vanilla CSS** and **Lucide React** icons.
 
-## How to Update Content
+All website information is organized in one central, easy-to-edit file:
+📁 `src/data/portfolioData.js`
 
-All the content for the website is stored in a single, structured file: `src/content.js`. 
-You do **not** need to touch the design files or HTML/CSS to update your information.
-
-### 1. General Information & Bio
-Open `src/content.js` and edit the `personalInfo` block. You can change your name, title, headline, and links here.
-For links, replace `[EMAIL]` and `[LINKEDIN URL]` with your actual contact details.
-
-### 2. Projects & Case Studies
-Your projects are listed under the `projects` array. 
-To add a new project:
-1. Copy an existing project block (from `{` to `},`).
-2. Update the `slug` (used for the URL, e.g., `my-new-project`).
-3. Fill in the placeholders (`challenge`, `context`, `role`, etc.).
-The website will automatically generate a new case study page for it!
-
-### 3. Learning Lab & Thinking
-You can add new experiments by adding objects to the `learningLab` array. 
-You can add new principles to the `principles` array.
-
-### 4. Resume & Skills
-Update your timeline, skills ecosystem, and resume history in their respective sections (`skills`, `timeline`, `resume`) at the bottom of the file.
+You do **not** need to touch React components or HTML/CSS to update your content.
 
 ---
 
-## How to Run Locally
+## 1. Updating Your Personal Information & Links
+Open `src/data/portfolioData.js` and locate the `personalInfo` section:
+- **Email:** Update `contactEmail` (e.g., `mailto:yourname@gmail.com`) and `emailDisplay`.
+- **LinkedIn:** Update `linkedIn` with your actual profile URL (e.g., `https://www.linkedin.com/in/mohammed-mazher-pasha`).
+- **Location:** Update `location`.
 
-If you want to view your changes on your own computer:
-1. Open a terminal in this folder.
-2. Run `npm install` (only needed the first time).
-3. Run `npm run dev`.
-4. Open the `http://localhost:5173` link that appears in your terminal.
+## 2. Replacing the Demo Photograph With Your Real Photo
+Currently, the website uses a warm, friendly demo photograph located at:
+`public/images/demo-portrait.jpg`
 
-## How to Deploy to GitHub Pages
+To use your actual photo:
+1. Save your photograph as a JPG or PNG.
+2. Place it in the `public/images/` folder (for example, `public/images/my-photo.jpg`).
+3. In `src/data/portfolioData.js`, update:
+   ```javascript
+   isDemoPhoto: false,
+   photoUrl: "images/my-photo.jpg",
+   ```
+4. Save the file. The demo banner will automatically disappear and your photo will be displayed!
 
-1. Go to your `package.json` and add a `homepage` field at the top:
-   `"homepage": "https://<your-github-username>.github.io/<your-repo-name>",`
-2. Run `npm install gh-pages --save-dev`.
-3. Add these two lines to your `scripts` in `package.json`:
-   `"predeploy": "npm run build",`
-   `"deploy": "gh-pages -d dist"`
-4. Run `npm run deploy` in your terminal.
-5. Your website will be live!
+## 3. Adding Your Experience Details
+In `src/data/portfolioData.js`, locate `experienceAreas`:
+- You can add or modify your employer names, organization titles, date ranges, and bullet points.
 
-Alternatively, you can upload the code to **Vercel** or **Netlify** for automatic deployment every time you push to GitHub. Just connect your repository and they will handle the rest.
+## 4. Adding Verified Certificates
+In `src/data/portfolioData.js`, locate `certificatePlaceholders`:
+- Once you obtain or locate your verified credentials, you can add them with their title, issuing organization, completion date, and optional verification links.
+
+## 5. Adding Genuine Testimonials
+In `src/data/portfolioData.js`, locate `testimonialsNotice`:
+- When you receive recommendations from managers, colleagues, or workshop participants, you can add testimonial cards directly.
+
+---
+
+## Running the Website Locally
+
+1. Open your terminal in this project folder.
+2. Run:
+   ```bash
+   npm run dev
+   ```
+3. Open the `http://localhost:5173/My_PersonalPortfolio_Website/` link in your browser.
+
+---
+
+## Testing the Production Build
+
+To test the build that GitHub Pages runs:
+```bash
+npm run build
+```
+The compiled files will be output to the `dist` folder.
